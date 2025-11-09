@@ -1,8 +1,8 @@
 # Heart-Disease-Prediction
 
-# 💓 Heart Disease Prediction Using Machine Learning
+# 💓 Heart Disease Prediction Using Machine Learning and Django Web App
 
-This project aims to predict the likelihood of heart disease in a patient using machine learning techniques. By analyzing key medical attributes, this model assists in early diagnosis and prevention.
+This project aims to predict the likelihood of heart disease in a patient using machine learning techniques. By analyzing key medical attributes, the system assists in early diagnosis and prevention. The model is trained in a notebook environment and deployed using a Django web application on PythonAnywhere for public use.
 
 ---
 
@@ -12,25 +12,25 @@ This project aims to predict the likelihood of heart disease in a patient using 
   - **1** = Presence of heart disease  
   - **0** = No heart disease  
 
-- The dataset consists of medical features like **age, sex, chest pain type, resting blood pressure, cholesterol levels**, etc.
+- The dataset consists of medical features like **age, sex, chest pain type, blood pressure, cholesterol levels**, etc.
 
-- The model is built and executed in a **Google Colab Notebook** using Python-based machine learning libraries.
+- The model was built and trained in a **Google Colab Notebook** using Python-based machine learning libraries and then deployed through Django.
 
 ---
 
-## 🧠 What I Did
+## 🧠 Machine Learning Model Development
 
 ### 🔍 1. Exploratory Data Analysis (EDA)
 
-- Analyzed feature distribution and relationships.
-- Visualized data using **histograms, count plots, heatmaps**, etc.
+- Analyzed feature distributions and relationships.
+- Visualized data using **histograms, count plots, and heatmaps**.
 - Checked correlations between the input features and the target column.
 
 ### 🧹 2. Data Preprocessing
 
 - Handled missing or inconsistent data.
-- Converted categorical data into numerical values using **Label Encoding**.
-- Standardized features using **StandardScaler** for optimization.
+- Encoded categorical data using **Label Encoding**.
+- Scaled features using **StandardScaler** for better model performance.
 
 ### 🤖 3. Model Building
 
@@ -45,58 +45,58 @@ Trained multiple machine learning models for prediction:
 
 ### 📊 4. Model Evaluation
 
-- Evaluated using metrics such as:  
+- Evaluated models using:  
   - **Accuracy**  
   - **Confusion Matrix**  
   - **Precision**  
   - **Recall**  
   - **F1-Score**
 
-- Compared model performances and identified the best model.
+- Compared performance and selected the best model.
 
 ### 🏆 5. Best Model Selection
 
-- The **Random Forest Classifier** achieved the highest accuracy and was chosen as the final model for prediction.
+- The **Random Forest Classifier** outperformed other models and was saved as the final model for deployment.
+
+---
+
+## 🖥️ Web App Deployment (Django + PythonAnywhere)
+
+To make the prediction model accessible via a user-friendly interface, a **Django web application** was developed.
+
+### ✅ Key Features
+
+- Simple form to collect patient details.
+- Real-time prediction using the trained model (`.joblib` file).
+- Clear result display with "Heart Disease Present" or "Not Present".
+
+### ⚙️ Django Project Structure
+
+- `views.py`: Includes logic to preprocess input and generate prediction.
+- `urls.py`: Manages routing for web pages.
+- `templates/`: Contains the HTML UI for form input.
+- Model integration via **Joblib** for loading and prediction.
+
+### 🌐 Live Application
+
+Try the live demo here:  
+🔗 **https://ml27priyam.pythonanywhere.com/**
 
 ---
 
 ## 🛠️ Technologies Used
 
+### Machine Learning:
 - **Python**
-- **Google Colab**
-- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `joblib`
+- Environment: Google Colab
+
+### Web Deployment:
+- **Django** (Python Web Framework)  
+- **HTML**, **CSS**
+- **Joblib** (Model Serialization)  
+- **PythonAnywhere** (Hosting)
 
 ---
 
-## 🚀 How to Run
-
-1. Clone this repository or download the notebook.
-2. Open the `.ipynb` file in **Google Colab** or **Jupyter Notebook**.
-3. Run all cells to explore, train, and test the model.
-4. Modify the input section to predict for new patients.
-
----
-
-## 📈 Future Enhancements
-
-- Deploy the model with **Streamlit** or **Flask**.
-- Apply **Hyperparameter Tuning** for optimization.
-- Add **real-time inputs** via UI for public use.
-- Try deep learning approaches (ANNs) and compare.
-
----
-
-## 📊 Dataset
-
-This project uses a heart disease dataset with patient attributes like age, cholesterol level, blood pressure, etc.  
-
-
----
-
-## 🙌 Acknowledgements
-
-- Dataset reference: UCI Machine Learning Repository (or other source).
-- Libraries used: thanks to open-source community.
-
----
 
